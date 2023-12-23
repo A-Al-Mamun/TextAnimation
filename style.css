@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 227px;
+    overflow: hidden;
+}
+.text{
+    position: relative;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.text-first{}
+.text-second{
+    color: orangered;
+}
+.text-second:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    border-left: 2px solid orangered;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
